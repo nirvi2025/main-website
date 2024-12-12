@@ -1,0 +1,58 @@
+name: Auto Deploy to VPS for Next.js
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code from GitHub repository
+      - name: Checkout code from GitHub repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js (ensure you use the correct version for Next.js)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Update to match your Next.js app version
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      # Step 4: Build the Next.js app
+      - name: Build Next.js app
+        run: |
+          npm run build
+
+      # Step 5: Set up SSH and add the server's SSH key to known_hosts
+      - name: Add server SSH key to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 46.28.44.219 >> ~/.ssh/known_hosts
+
+      # Step 6: Set up SSH agent to connect securely
+      - name: Set up SSH agent
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Step 7: Sync project files to the VPS
+      - name: Copy files to VPS
+        run: |
+          rsync -avz --delete --exclude='node_modules' ./ root@46.28.44.219:/home/application/webprojects/next/
+
+      # Step 8: Run deployment script on VPS
+      - name: Run deployment script on VPS
+        run: |
+          ssh -o StrictHostKeyChecking=no root@46.28.44.219 << 'EOF'
+            cd /home/application/webprojects/next
+            npm install --production  # Install only production dependencies
+            pm2 restart nirvy-nextjs || pm2 start npm --name "nirvy-nextjs" -- start  # Restart or start the app with PM2
+            pm2 save  # Save the PM2 process list to ensure it restarts on reboot
+          EOF

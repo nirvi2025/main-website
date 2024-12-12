@@ -13,20 +13,6 @@ import Chatbot from "@/components/Chatbot";
 export const metadata = {
   title: "Nirvy - Online Food Delivery Application",
   description: "Welcome to our Nirvy page.",
-    openGraph: {
-        title: 'Nirvy - Online Food Delivery Application | Landing Page',
-        description: 'Discover our latest food products.',
-        url: 'https://nirvy.in/',
-        type: 'website',
-        images: [
-            {
-                url: '/images/assets/img/logo/black-logo.svg',
-                width: 1200,
-                height: 630,
-                alt: 'Nirvy Logo',
-            },
-        ],
-    },
 };
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {

@@ -5,13 +5,14 @@ type FunFactCounterProps = {
     style?: string;
 };
 const FunFactCounter : React.FC<FunFactCounterProps> = ({ style }) => {
-    console.log("Fun FactCounter", style);
-  return (
+   return (
     <div className="row">
       <div
         className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
         data-wow-delay=".2s"
       >
+          {
+              style &&
         <div className={`funfact-box-items style-${style}`}>
           <h2>
             <span className="count">
@@ -22,6 +23,7 @@ const FunFactCounter : React.FC<FunFactCounterProps> = ({ style }) => {
           <h6>Average Conversion Rate</h6>
           <p>Sed perspiciatis unde omnis este natus sit volupta</p>
         </div>
+          }
       </div>
       <div
         className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"

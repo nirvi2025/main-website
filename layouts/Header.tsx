@@ -6,6 +6,7 @@ import {NextHeaderProps} from "@/utility/interface";
 import { nextUtility } from "@/utility";
 import Image from "next/image";
 import profilePic from '../public/assets/img/logo/white-logo.svg';
+import N_logo from '../public/assets/img/nirvy/Nirvi_Main Logo File_Horizontal Logo.png'
 
 const Header:React.FC<NextHeaderProps> = ({ header, single }) => {
   useEffect(() => {
@@ -843,7 +844,8 @@ const Header3:React.FC<NextHeaderProps> = ({ single }) => {
             <div className="header-main">
               <div className="sticky-logo">
                 <Link href="/">
-                  <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                  <Image src={N_logo} alt={"Niry_logo-img"} className="logo-1" height={50} width={160} priority={true}/>
+                  {/*<img src="assets/img/logo/black-logo.svg" alt="logo-img" />*/}
                 </Link>
               </div>
               <div className="header-left">

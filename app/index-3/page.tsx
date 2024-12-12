@@ -5,6 +5,8 @@ import { TestimonialSlider3 } from "@/components/TestimonialSlider";
 import { WorkingProcess2 } from "@/components/WorkingProcess";
 import NextLayout from "@/layouts/NextLayout";
 import Link from "next/link";
+import Image from "next/image";
+import Landing_Page_logo from "@/public/assets/img/nirvy/Landingpage.png";
 
 export const metadata = {
   title: "Nirvy - Online Food Delivery Application",
@@ -27,13 +29,11 @@ const page = () => {
                   25+ Years Of Experience
                 </span>
                 <h1 className="wow fadeInUp" data-wow-delay=".4s">
-                  The Effective <br /> Solutions To Grow <br />
-                  your <span>Business</span>
+                  Healthy Meals, Happy Kids—Crafted<br /> with Care <br /><span>Delivered with Love!</span>
                 </h1>
                 <p className="wow fadeInUp" data-wow-delay=".6s">
-                  Sed ut perspiciatis unde omnis iste natus voluptatem
-                  accusantium <br />
-                  doloremque laudantium, totam rem aperiam
+                  Wholesome, delicious meals delivered straight to your child's school<br />
+                  because every bite matters for their growth and happiness!
                 </p>
                 <div className="hero-button">
                   <Link
@@ -55,7 +55,7 @@ const page = () => {
             </div>
             <div className="col-lg-6">
               <div className="hero-image">
-                <img src="assets/img/hero/hero-1.png" alt="img" />
+                <Image src={Landing_Page_logo} alt={"Nirvy_logo-img"} className="logo-1" />
                 <div className="frame-shape">
                   <img src="assets/img/hero/frame-3.png" alt="shape-img" />
                 </div>

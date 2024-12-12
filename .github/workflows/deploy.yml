@@ -53,6 +53,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no root@46.28.44.219 << 'EOF'
             cd /home/application/webprojects/next
             npm install --production  # Install only production dependencies
-            pm2 restart nirvy-nextjs || pm2 start npm --name "nirvy-nextjs" -- start  # Restart or start the app with PM2
+            pm2 delete nirvy-nextjs || true  # Delete the existing process if it exists
+            pm2 start npm --name "nirvy-nextjs" -- start  # Start the app with PM2
             pm2 save  # Save the PM2 process list to ensure it restarts on reboot
           EOF

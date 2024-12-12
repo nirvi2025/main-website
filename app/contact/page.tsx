@@ -1,5 +1,10 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import NextLayout from "@/layouts/NextLayout";
+
+export const metadata = {
+  title: "Nirvy - Online Food Delivery Application",
+  description: "Welcome to our Nirvy page.",
+};
 const page = () => {
   return (
     <NextLayout>

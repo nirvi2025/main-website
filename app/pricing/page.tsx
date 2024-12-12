@@ -4,6 +4,10 @@ import Pricing, { Pricing2 } from "@/components/Pricing";
 import { TestimonialSlider1 } from "@/components/TestimonialSlider";
 import NextLayout from "@/layouts/NextLayout";
 
+export const metadata = {
+  title: "Nirvy - Online Food Delivery Application",
+  description: "Welcome to our Nirvy page.",
+};
 const page = () => {
   return (
     <NextLayout>

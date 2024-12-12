@@ -2,6 +2,11 @@ import BrandSlider from "@/components/BrandSlider";
 import { TestimonialSlider2 } from "@/components/TestimonialSlider";
 import NextLayout from "@/layouts/NextLayout";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Nirvy - Online Food Delivery Application",
+  description: "Welcome to our Nirvy page.",
+};
 const page = () => {
   return (
     <NextLayout header={5} footer={3} bgBlack={true} single>

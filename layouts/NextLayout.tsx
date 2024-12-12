@@ -4,8 +4,12 @@ import { Fragment, useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import {NextLayoutProps} from "@/utility/interface";
+
+export const metadata = {
+  title: "Nirvy - Online Food Delivery Application",
+  description: "Welcome to our Nirvy page.",
+};
 const NextLayout = ({ header, footer, children, bgBlack, single }:NextLayoutProps) => {
-  console.log(header,"Header***********");
   useEffect(() => {
     const body = document?.querySelector("body");
 

@@ -844,7 +844,7 @@ const Header3:React.FC<NextHeaderProps> = ({ single }) => {
             <div className="header-main">
               <div className="sticky-logo">
                 <Link href="/">
-                  <Image src={N_logo} alt={"Niry_logo-img"} className="logo-1" height={50} width={160} priority={true}/>
+                  <Image src={N_logo} alt={"Niry_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
                   {/*<img src="assets/img/logo/black-logo.svg" alt="logo-img" />*/}
                 </Link>
               </div>

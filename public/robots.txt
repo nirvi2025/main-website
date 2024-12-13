@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nirvy.in/
+
+# Sitemaps
+Sitemap: https://nirvy.in/sitemap.xml

@@ -14,35 +14,36 @@ jobs:
       - name: Checkout code from GitHub repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js (ensure you use the correct version for Next.js)
+      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Update to match your Next.js app version
+          node-version: '18'
 
       # Step 3: Install dependencies
       - name: Install dependencies
         run: |
           npm ci
 
-      # Step 4: Build the Next.js app
+      # Step 4: Build Next.js app
       - name: Build Next.js app
         run: |
+          rm -rf .next  # Clear Next.js build cache
           npm run build
 
-      # Step 5: Set up SSH and add the server's SSH key to known_hosts
+      # Step 5: Add server SSH key to known_hosts
       - name: Add server SSH key to known_hosts
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H 46.28.44.219 >> ~/.ssh/known_hosts
 
-      # Step 6: Set up SSH agent to connect securely
+      # Step 6: Set up SSH agent
       - name: Set up SSH agent
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # Step 7: Sync project files to the VPS
+      # Step 7: Copy files to VPS
       - name: Copy files to VPS
         run: |
           rsync -avz --delete --exclude='node_modules' ./ root@46.28.44.219:/home/application/webprojects/next/
@@ -52,20 +53,15 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no root@46.28.44.219 << 'EOF'
             set -e  # Exit if any command fails
-
-            # Navigate to project directory
             cd /home/application/webprojects/next
-
-            # Kill any process using port 3000
-            PORT=3000
+            # Stop the app and kill any process on port 3002
+            pm2 stop nirvy-nextjs || true
+            PORT=3002
             PID=$(sudo lsof -t -i:$PORT) && sudo kill -9 $PID || echo "No process running on port $PORT"
-
-            # Install production dependencies
+            # Clear npm cache and install production dependencies
+            npm cache clean --force
             npm install --production
-
-            # Restart PM2 process, or start if not existing
-            pm2 restart nirvy-nextjs || pm2 start npm --name "nirvy-nextjs" -- start
-
-            # Save PM2 process list
-            pm2 save
+            # Restart the app with PM2 on port 3002
+            PORT=3002 pm2 restart nirvy-nextjs || pm2 start npm --name "nirvy-nextjs" -- start
+            pm2 save  # Save PM2 process list
           EOF

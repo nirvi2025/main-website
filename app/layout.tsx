@@ -1,3 +1,4 @@
+import React from "react";
 import "@css/animate.css";
 import "@css/bootstrap.min.css";
 import "@css/font-awesome.css";

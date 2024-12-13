@@ -1,924 +1,470 @@
-import FunFactCounter from "@/components/FunFactCounter";
-import Pricing from "@/components/Pricing";
-import { TestimonialSlider1 } from "@/components/TestimonialSlider";
+import Counter from "@/components/Counter";
+import GrowBusiness from "@/components/GrowBusiness";
+import Team from "@/components/Team";
+import { TestimonialSlider3 } from "@/components/TestimonialSlider";
+import { WorkingProcess2 } from "@/components/WorkingProcess";
 import NextLayout from "@/layouts/NextLayout";
 import Link from "next/link";
+import Image from "next/image";
+import Landing_Page_logo from "@/public/assets/img/nirvy/Landingpage.png";
 
 export const metadata = {
   title: "Nirvy - Online Food Delivery Application",
   description: "Welcome to our Nirvy page.",
 };
-
 const page = () => {
   return (
-    <NextLayout header={1}>
-      <section
-        className="hero-section hero-1 bg-cover fix"
-        style={{ backgroundImage: 'url("assets/img/hero/01.jpg")' }}
-      >
-        <div className="container">
-          <div className="row g-4 justify-content-between">
-            <div className="col-lg-6">
-              <div className="hero-content">
-                <h1 className="wow fadeInUp" data-wow-delay=".2s">
-                  We Take Care <br />
-                  Your IT Solutions <br /> &amp; Provide Best <br /> Services
-                </h1>
-                <div className="hero-button">
-                  <Link
-                    href="/"
-                    className="theme-btn hover-white wow fadeInUp"
-                    data-wow-delay=".4s"
-                  >
-                    Get Started Now <i className="far fa-arrow-right" />
-                  </Link>
-                  <Link
-                    href="service"
-                    className="btn-link wow fadeInUp"
-                    data-wow-delay=".6s"
-                  >
-                    View Services <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-                <div
-                  className="hero-client d-flex align-items-center gap-4 mt-50 wow fadeInUp"
-                  data-wow-delay=".8s"
-                >
-                  <img src="assets/img/hero/client.png" alt="img" />
-                  <p className="text-white">
-                    Trusted by 1M+ people <br />
-                    around the globe
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-5 wow fadeInUp" data-wow-delay=".4s">
-              <div className="hero-contact-box">
-                <h4>Get Consultations</h4>
-                <p>Ready to Register Our Landsio Services</p>
-                <form
-                  action="#"
-                  id="contact-form"
-                  method="POST"
-                  className="contact-form-item"
-                >
-                  <div className="row g-4">
-                    <div className="col-lg-12">
-                      <div className="form-clt">
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          placeholder="Your Name"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="form-clt">
-                        <input
-                          type="text"
-                          name="email"
-                          id="email"
-                          placeholder="Email Address"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="form-clt">
-                        <input
-                          type="text"
-                          name="phone"
-                          id="phone"
-                          placeholder="Phone Number"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="payment-save">
-                        <input
-                          type="checkbox"
-                          className="form-check-input"
-                          name="save-for-next"
-                          id="saveForNext"
-                        />
-                        <p>
-                          I’ve Read and agreed to{" "}
-                          <Link href="/">Terms &amp; Conditions</Link>
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <button type="submit" className="theme-btn">
-                        Get Started Now <i className="far fa-arrow-right" />
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+      <NextLayout header={3} footer={3}>
+        {/* Hero Section Start */}
+        <section className="hero-section hero-3">
+          <div className="bottom-shape">
+            <img src="assets/img/hero/bottom-shape.png" alt="shape-img" />
           </div>
-        </div>
-      </section>
-      {/* Service Section Start */}
-      <section className="service-section fix pt-80 pb-80 section-bg">
-        <div className="container">
-          <h4
-            className="mb-5 text-white text-center wow fadeInUp"
-            data-wow-delay=".3s"
-          >
-            Preparing For Your Business Success With IT Solution
-          </h4>
-          <div className="row g-4">
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".3s"
-            >
-              <div className="service-items">
-                <div className="content">
-                  <p>01</p>
-                  <h5>
-                    <Link href="service-details">
-                      Data Manage &amp; <br />
-                      Solutions Center
-                    </Link>
-                  </h5>
-                  <Link className="arrow-btn" href="service-details">
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-                <div className="thumb">
-                  <img src="assets/img/service/01.jpg" alt="img" />
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".5s"
-            >
-              <div className="service-items">
-                <div className="content">
-                  <p>02</p>
-                  <h5>
-                    <Link href="service-details">
-                      Preparing For <br />
-                      Cloud Services
-                    </Link>
-                  </h5>
-                  <Link className="arrow-btn" href="service-details">
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-                <div className="thumb">
-                  <img src="assets/img/service/02.jpg" alt="img" />
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".7s"
-            >
-              <div className="service-items">
-                <div className="content">
-                  <p>03</p>
-                  <h5>
-                    <Link href="service-details">
-                      Machine Learning <br />
-                      &amp; Development
-                    </Link>
-                  </h5>
-                  <Link className="arrow-btn" href="service-details">
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-                <div className="thumb">
-                  <img src="assets/img/service/03.jpg" alt="img" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* About Section Start */}
-      <section className="about-section fix section-padding">
-        <div className="container">
-          <div className="about-wrapper">
+          <div className="container">
             <div className="row g-4 align-items-center">
               <div className="col-lg-6">
-                <div className="about-image-items">
-                  <ul
-                    className="experience-text wow fadeInUp"
-                    data-wow-delay=".6s"
-                  >
-                    <li>25+ Years Of Experience</li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>Awards Winning Company</li>
-                  </ul>
-                  <div className="row g-4 align-items-center">
-                    <div className="col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                      <div className="about-image">
-                        <img src="assets/img/about/01.jpg" alt="about-img" />
-                      </div>
-                    </div>
-                    <div className="col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                      <div className="about-image">
-                        <img src="assets/img/about/02.jpg" alt="about-img" />
-                      </div>
-                    </div>
+                <div className="hero-content">
+                <span className="sub-content wow fadeInUp" data-wow-delay=".2s">
+                  <img src="assets/img/bale.png" alt="img" />
+                  25+ Years Of Experience
+                </span>
+                  <h1 className="wow fadeInUp" data-wow-delay=".4s">
+                    Healthy Meals, Happy Kids—Crafted<br /> with Care <br /><span>Delivered with Love!</span>
+                  </h1>
+                  <p className="wow fadeInUp" data-wow-delay=".6s">
+                    Wholesome, delicious meals delivered straight to your child's school<br />
+                    because every bite matters for their growth and happiness!
+                  </p>
+                  <div className="hero-button">
+                    <Link
+                        href="about"
+                        className="theme-btn wow fadeInUp"
+                        data-wow-delay=".7s"
+                    >
+                      Discover More <i className="far fa-arrow-right" />
+                    </Link>
+                    <Link
+                        href="service"
+                        className="btn-link wow fadeInUp"
+                        data-wow-delay=".8s"
+                    >
+                      View Services <i className="far fa-arrow-right" />
+                    </Link>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="about-content">
-                  <div className="section-title">
+                <div className="hero-image">
+                  <Image src={Landing_Page_logo} alt={"Nirvy_logo-img"} className="logo-1" />
+                  <div className="frame-shape">
+                    <img src="assets/img/hero/frame-3.png" alt="shape-img" />
+                  </div>
+                  <div className="bcleft-shape float-bob-x">
+                    <img src="assets/img/hero/bcleft.png" alt="shape-img" />
+                  </div>
+                  <div className="bcright-shape float-bob-y">
+                    <img src="assets/img/hero/bcright.png" alt="shape-img" />
+                  </div>
+                  <div className="message-shape">
+                    <img src="assets/img/hero/message.png" alt="shape-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Service Offer Section Start */}
+        <section className="service-offer-section" id="services">
+          <div className="container">
+            <div className="section-title text-center">
+            <span className="sub-content wow fadeInUp">
+              <img src="assets/img/bale.png" alt="img" />
+              What We Offer
+            </span>
+              <h2 className="wow fadeInUp" data-wow-delay=".3s">
+                Business integrates with all <br />
+                your favorite tools
+              </h2>
+            </div>
+            <div className="row">
+              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                <div className="service-offer-items">
+                  <div className="icon">
+                    <img
+                        src="assets/img/service/icon/brainstorming.svg"
+                        alt="img"
+                    />
+                  </div>
+                  <div className="offer-content">
+                    <div className="content">
+                      <h3>
+                        <Link href="service-details">Business Consulting</Link>
+                      </h3>
+                      <p>We Fixed about your business Solutions</p>
+                    </div>
+                    <Link href="service-details" className="arrow-icon">
+                      <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                <div className="service-offer-items">
+                  <div className="icon">
+                    <img src="assets/img/service/icon/earning.svg" alt="img" />
+                  </div>
+                  <div className="offer-content">
+                    <div className="content">
+                      <h3>
+                        <Link href="service-details">Financial Planning</Link>
+                      </h3>
+                      <p>We Fixed about your business Solutions</p>
+                    </div>
+                    <Link href="service-details" className="arrow-icon">
+                      <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                <div className="service-offer-items">
+                  <div className="icon">
+                    <img src="assets/img/service/icon/targeted.svg" alt="img" />
+                  </div>
+                  <div className="offer-content">
+                    <div className="content">
+                      <h3>
+                        <Link href="service-details">
+                          Grow Marketing &amp; Sales
+                        </Link>
+                      </h3>
+                      <p>We Fixed about your business Solutions</p>
+                    </div>
+                    <Link href="service-details" className="arrow-icon">
+                      <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                <div className="service-offer-items">
+                  <div className="icon">
+                    <img src="assets/img/service/icon/technology.svg" alt="img" />
+                  </div>
+                  <div className="offer-content">
+                    <div className="content">
+                      <h3>
+                        <Link href="service-details">
+                          Modernize &amp; Technology
+                        </Link>
+                      </h3>
+                      <p>We Fixed about your business Solutions</p>
+                    </div>
+                    <Link href="service-details" className="arrow-icon">
+                      <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* About Section Start */}
+        <section className="about-section-3 section-padding pt-0" id="about">
+          <div className="container">
+            <div className="about-wrapper-2">
+              <div className="row g-4">
+                <div className="col-lg-6">
+                  <div className="about-image-items">
+                    <div
+                        className="about-image-1 wow fadeInUp"
+                        data-wow-delay=".3s"
+                    >
+                      <img src="assets/img/about/03.jpg" alt="img" />
+                      <div className="about-image-2">
+                        <img src="assets/img/about/04.jpg" alt="img" />
+                      </div>
+                    </div>
+                    <div
+                        className="experience-items float-bob-x wow fadeInLeft"
+                        data-wow-delay=".5s"
+                    >
+                      <h6>
+                        Trusted by 1M+ people <br />
+                        around the globe
+                      </h6>
+                      <img src="assets/img/about/face-mans.png" alt="img" />
+                      <h2>
+                        <span className="count">25</span>+
+                      </h2>
+                      <p>Years Of Experience</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="about-content">
+                    <div className="section-title">
                     <span className="sub-content wow fadeInUp">
                       <img src="assets/img/bale.png" alt="img" />
                       About Company
                     </span>
-                    <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                      Preparing Your Success Trusted IT Services
-                    </h2>
-                  </div>
-                  <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                    Sed ut perspiciatis unde omnis iste natus error sit volupta
-                    temes accusantium doloremque laudantium, totam rem
-                  </p>
-                  <ul className="about-list wow fadeInUp" data-wow-delay=".3s">
-                    <li>
-                      <i className="fas fa-check" />
-                      Connect with leads with zero hassle.
-                    </li>
-                    <li>
-                      <i className="fas fa-check" />
-                      Take quick payments direct from meetings
-                    </li>
-                    <li>
-                      <i className="fas fa-check" />
-                      Start finding leads that get coverts quickly
-                    </li>
-                  </ul>
-                  <div
-                    className="about-author wow fadeInUp"
-                    data-wow-delay=".5s"
-                  >
-                    <div className="about-button">
-                      <Link href="about" className="theme-btn">
-                        Learn More Us
-                        <i className="far fa-arrow-right" />
-                      </Link>
+                      <h2 className="wow fadeInUp" data-wow-delay=".3s">
+                        Grow Your Business With <br />
+                        Our Next Agency
+                      </h2>
                     </div>
-                    <div className="author-image">
-                      <img src="assets/img/about/author.jpg" alt="author-img" />
-                      <div className="content">
-                        <h5>
-                          Lucas J. Swe / <span>CO Founder</span>
-                        </h5>
+                    <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
+                      Sed ut perspiciatis unde omnis iste natus voluptatem
+                      accusantium doloremque laudantium, totam rem aperiam eaque
+                      ipsa quae
+                    </p>
+                    <div className="about-counter-area">
+                      <div className="row g-4">
+                        <div
+                            className="col-md-6 col-sm-6 wow fadeInUp"
+                            data-wow-delay=".3s"
+                        >
+                          <div className="about-counter-items">
+                            <h2>
+                            <span className="count">
+                              {" "}
+                              <Counter end={98} />
+                            </span>
+                              %
+                            </h2>
+                            <p>Average Conversion Rate</p>
+                          </div>
+                        </div>
+                        <div
+                            className="col-md-6 col-sm-6 wow fadeInUp"
+                            data-wow-delay=".5s"
+                        >
+                          <div className="about-counter-items">
+                            <h2>
+                            <span className="count">
+                              <Counter end={35} />
+                            </span>
+                              M+
+                            </h2>
+                            <p>Traffic Generated</p>
+                          </div>
+                        </div>
+                        <div
+                            className="col-md-6 col-sm-6 wow fadeInUp"
+                            data-wow-delay=".3s"
+                        >
+                          <div className="about-counter-items">
+                            <h2>
+                            <span className="count">
+                              {" "}
+                              <Counter end={98} />
+                            </span>
+                              %
+                            </h2>
+                            <p>Positive Customer Review</p>
+                          </div>
+                        </div>
+                        <div
+                            className="col-md-6 col-sm-6 wow fadeInUp"
+                            data-wow-delay=".5s"
+                        >
+                          <div className="about-counter-items">
+                            <h2>
+                            <span className="count">
+                              {" "}
+                              <Counter end={92} />
+                            </span>
+                              %
+                            </h2>
+                            <p>Professional Team Members</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Service Section Start */}
-      <section className="service-section section-padding pt-0">
-        <div className="container">
-          <div className="section-title text-center">
-            <span className="sub-content wow fadeInUp">
-              <img src="assets/img/bale.png" alt="img" />
-              Popular Services
-            </span>
-            <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              We Provide Best Quality Service <br />
-              For Your Business
-            </h2>
-          </div>
-          <div className="row">
-            <div
-              className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".2s"
-            >
-              <div className="service-card-items">
-                <div className="icon">
-                  <i className="flaticon-technical" />
-                </div>
-                <h3>
-                  <Link href="service-details">
-                    Data Center and Cloud Services
-                  </Link>
-                </h3>
-                <div className="service-thumb">
-                  <img src="assets/img/service/04.png" alt="service-img" />
-                  <div className="line-shape">
-                    <img src="assets/img/service/line.png" alt="shape-img" />
-                  </div>
-                </div>
-                <Link className="link-btn" href="service-details">
-                  Read More
-                  <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-            <div
-              className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="service-card-items active">
-                <div className="icon">
-                  <i className="flaticon-vector-design" />
-                </div>
-                <h3>
-                  <Link href="service-details">
-                    Web Development Software Renew
-                  </Link>
-                </h3>
-                <div className="service-thumb">
-                  <img src="assets/img/service/05.png" alt="service-img" />
-                  <div className="line-shape">
-                    <img src="assets/img/service/line.png" alt="shape-img" />
-                  </div>
-                </div>
-                <Link className="link-btn" href="service-details">
-                  Read More
-                  <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-            <div
-              className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".6s"
-            >
-              <div className="service-card-items">
-                <div className="icon">
-                  <i className="flaticon-database" />
-                </div>
-                <h3>
-                  <Link href="service-details">
-                    IT Management Machine Learning
-                  </Link>
-                </h3>
-                <div className="service-thumb">
-                  <img src="assets/img/service/06.png" alt="service-img" />
-                  <div className="line-shape">
-                    <img src="assets/img/service/line.png" alt="shape-img" />
-                  </div>
-                </div>
-                <Link className="link-btn" href="service-details">
-                  Read More
-                  <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-            <div
-              className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".8s"
-            >
-              <div className="service-card-items">
-                <div className="icon">
-                  <i className="flaticon-design-thinking" />
-                </div>
-                <h3>
-                  <Link href="service-details">
-                    Digital Product UI/UX Design
-                  </Link>
-                </h3>
-                <div className="service-thumb">
-                  <img src="assets/img/service/07.png" alt="service-img" />
-                  <div className="line-shape">
-                    <img src="assets/img/service/line.png" alt="shape-img" />
-                  </div>
-                </div>
-                <Link className="link-btn" href="service-details">
-                  Read More
-                  <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Cta Video Section Start */}
-      <div
-        className="cta-video-section fix bg-cover"
-        style={{ backgroundImage: 'url("assets/img/cta/cta-video.jpg")' }}
-      >
-        <div className="container">
-          <div className="cta-video-wrapper">
-            <div className="video-box">
-              <a
-                href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
-                className="video-buttton ripple video-popup"
-              >
-                <i className="fas fa-play" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="marquee-wrapper text-slider">
-          <div className="marquee-inner to-left">
-            <ul className="marqee-list d-flex">
-              <li className="marquee-item">
-                <span className="text-slider">IT</span>
-                <span className="text-slider">Consulting </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">Co</span>
-                <span className="text-slider">Machine </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">IT</span>
-                <span className="text-slider">Learning </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">Web </span>
-                <span className="text-slider">Development</span>
-                <span className="text-slider">IT</span>
-                <span className="text-slider">Consulting </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">Co</span>
-                <span className="text-slider">Machine </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">IT</span>
-                <span className="text-slider">Learning </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">Web </span>
-                <span className="text-slider">Development</span>
-                <span className="text-slider">IT</span>
-                <span className="text-slider">Consulting </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">Co</span>
-                <span className="text-slider">Machine </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">IT</span>
-                <span className="text-slider">Learning </span>
-                <span className="text-slider style-border" />
-                <span className="text-slider">Web </span>
-                <span className="text-slider">Development</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {/* Team Section Start */}
-      <section className="team-section fix section-padding">
-        <div className="container">
-          <div className="row g-4 align-items-center">
-            <div className="col-lg-6">
-              <div className="section-title">
-                <span className="sub-content wow fadeInUp">
-                  <img src="assets/img/bale.png" alt="img" />
-                  Team Member
-                </span>
-                <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                  Meet Our Professional <br />
-                  Team Members
-                </h2>
-              </div>
-              <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                Sed ut perspiciatis unde omnis iste natus error sit volupta
-                temes <br /> accusantium doloremque laudantium, totam rem
-              </p>
-            </div>
-            <div
-              className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".3s"
-            >
-              <div className="team-items">
-                <div className="team-image">
-                  <img src="assets/img/team/01.jpg" alt="img" />
-                </div>
-                <div className="team-content">
-                  <h4>
-                    <Link href="team-details">Robert E. Whitmore</Link>
-                  </h4>
-                  <p>Product Designer</p>
-                  <div className="social-profile">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-btn">
-                      <i className="far fa-plus" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".5s"
-            >
-              <div className="team-items">
-                <div className="team-image">
-                  <img src="assets/img/team/02.jpg" alt="img" />
-                </div>
-                <div className="team-content">
-                  <h4>
-                    <Link href="team-details">Johnny M. Smith</Link>
-                  </h4>
-                  <p>IT Consultant</p>
-                  <div className="social-profile">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-btn">
-                      <i className="far fa-plus" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".2s"
-            >
-              <div className="team-items">
-                <div className="team-image">
-                  <img src="assets/img/team/03.jpg" alt="img" />
-                </div>
-                <div className="team-content">
-                  <h4>
-                    <Link href="team-details">Angelo H. Tomlin</Link>
-                  </h4>
-                  <p>Senior Manager</p>
-                  <div className="social-profile">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-btn">
-                      <i className="far fa-plus" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".4s"
-            >
-              <div className="team-items">
-                <div className="team-image">
-                  <img src="assets/img/team/04.jpg" alt="img" />
-                </div>
-                <div className="team-content">
-                  <h4>
-                    <Link href="team-details">Robert E. Whitmore</Link>
-                  </h4>
-                  <p>Web Designer</p>
-                  <div className="social-profile">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-btn">
-                      <i className="far fa-plus" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".6s"
-            >
-              <div className="team-items">
-                <div className="team-image">
-                  <img src="assets/img/team/05.jpg" alt="img" />
-                </div>
-                <div className="team-content">
-                  <h4>
-                    <Link href="team-details">Manuel G. Wilmer</Link>
-                  </h4>
-                  <p>CEO &amp; Founder</p>
-                  <div className="social-profile">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-btn">
-                      <i className="far fa-plus" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-3 col-lg-4 col-md-6 ps-xxl-5 wow fadeInUp"
-              data-wow-delay=".8s"
-            >
-              <Link href="team" className="theme-btn">
-                View More Members
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Funfact Section Start */}
-      <section className="funfact-section section-padding pt-0">
-        <div className="container">
-          <div className="section-title text-center">
-            <span className="sub-content wow fadeInUp">
-              <img src="assets/img/bale.png" alt="img" />
-              Company Fun Fact
-            </span>
-            <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Learn Our Company Statistics
-            </h2>
-          </div>
-          <FunFactCounter />
-        </div>
-      </section>
-      {/* Popular Case Study Section Start */}
-      <section className="case-study-section fix section-padding theme-bg">
-        <div className="left-shape">
-          <img src="assets/img/case-study/left-shape.png" alt="shape-img" />
-        </div>
-        <div className="right-shape">
-          <img src="assets/img/case-study/right-shape.png" alt="shape-img" />
-        </div>
-        <div className="container">
-          <div className="section-title-area">
-            <div className="section-title">
-              <span className="sub-content wow fadeInUp">
-                <img src="assets/img/bale.png" alt="img" />
-                Popular Case Study
-              </span>
-              <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                Discover Our Popular Case Study <br /> That We Globally
-                Completes
-              </h2>
-            </div>
-            <Link href="project" className="theme-btn white-border">
-              View More Cases
-            </Link>
-          </div>
-          <div className="row">
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".3s"
-            >
-              <div className="case-study-items">
-                <div className="thumb">
-                  <img src="assets/img/case-study/01.jpg" alt="img" />
-                </div>
-                <div className="content">
-                  <p>IT Consulting</p>
-                  <h3>
-                    <Link href="case-study-details">
-                      How to achieve more with your nine to five
+                    <Link
+                        href="about"
+                        className="theme-btn wow fadeInUp"
+                        data-wow-delay=".4s"
+                    >
+                      Learn More Us <i className="far fa-arrow-right" />
                     </Link>
-                  </h3>
-                  <Link className="arrow-btn" href="case-study-details">
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".5s"
-            >
-              <div className="case-study-items">
-                <div className="thumb">
-                  <img src="assets/img/case-study/02.jpg" alt="img" />
-                </div>
-                <div className="content">
-                  <p>Machine Learning</p>
-                  <h3>
-                    <Link href="case-study-details">
-                      Strategies for outstanding future results
-                    </Link>
-                  </h3>
-                  <Link className="arrow-btn" href="case-study-details">
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".7s"
-            >
-              <div className="case-study-items">
-                <div className="thumb">
-                  <img src="assets/img/case-study/03.jpg" alt="img" />
-                </div>
-                <div className="content">
-                  <p>Software Design</p>
-                  <h3>
-                    <Link href="case-study-details">
-                      Discover a better way of system defining company goals.
-                    </Link>
-                  </h3>
-                  <Link className="arrow-btn" href="case-study-details">
-                    <i className="far fa-arrow-right" />
-                  </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Pricing Section Start */}
-      <Pricing />
-      {/* Testimonial Section Start */}
-      <section className="testimonial-section fix section-padding pt-0">
-        <div className="container">
-          <div className="testimonial-wrapper">
-            <div className="row g-4">
-              <div className="col-lg-3">
-                <div className="testimonial-image">
-                  <img src="assets/img/testimonial/testimonial.png" alt="img" />
+        </section>
+        {/* Team Section Start */}
+        <Team />
+        {/* Business Boost Section Start */}
+        <section className="business-boost-section section-padding pt-0">
+          <div className="container">
+            <div className="business-boost-wrapper">
+              <div className="row g-4 align-items-center">
+                <div className="col-lg-6">
+                  <div className="business-boost-content">
+                    <img
+                        src="assets/img/start-business-men.png"
+                        alt="img"
+                        className="wow fadeInUp"
+                        data-wow-delay=".2s"
+                    />
+                    <h2 className="wow fadeInUp" data-wow-delay=".4s">
+                      Ready to Boost Business <br />
+                      &amp; product Sales ?
+                    </h2>
+                    <p className="wow fadeInUp" data-wow-delay=".6s">
+                      Sed ut perspiciatis unde omnis iste natus voluptatem <br />
+                      accusantium doloremque laudantium totam
+                    </p>
+                    <Link
+                        href="contact"
+                        className="theme-btn bg-2 wow fadeInUp"
+                        data-wow-delay=".7x"
+                    >
+                      Get Started Now <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div className="col-lg-7 ps-lg-5">
-                <TestimonialSlider1 />
+                <div className="col-lg-6 mt-4 wow fadeInUp" data-wow-delay=".4s">
+                  <div className="video-image">
+                    <img src="assets/img/video-bg-popup.jpg" alt="img" />
+                    <div className="video-box">
+                      <a
+                          href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
+                          className="video-buttton ripple video-popup"
+                      >
+                        <i className="fas fa-play" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* News Section Start */}
-      <section className="news-section section-padding pt-0">
-        <div className="container">
-          <div className="section-title text-center">
+        </section>
+        {/* Grow Business Section Start */}
+        <GrowBusiness />
+        {/* Working Process Section Start */}
+        <WorkingProcess2 />
+        {/* Testimonial Section Start */}
+        <section className="testimonial-section-3 fix section-padding">
+          <div className="container">
+            <div className="testimonial-wrapper-2">
+              <div className="row justify-content-between align-items-center g-4">
+                <div className="col-lg-6">
+                  <TestimonialSlider3 />
+                </div>
+                <div className="col-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                  <div className="testimonial-image">
+                    <img src="assets/img/testimonial/01.jpg" alt="img" />
+                    <div className="card-shape-1 float-bob-x">
+                      <img
+                          src="assets/img/testimonial/testimonial-card1.png"
+                          alt="shape-img"
+                      />
+                    </div>
+                    <div className="card-shape-2 float-bob-y">
+                      <img
+                          src="assets/img/testimonial/testimonial-card2.png"
+                          alt="shape-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* News Section Start */}
+        <section className="news-section section-padding" id="blog">
+          <div className="container">
+            <div className="section-title text-center">
             <span className="sub-content wow fadeInUp">
               <img src="assets/img/bale.png" alt="img" />
               News &amp; Blog
             </span>
-            <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Explore Our Latest News &amp; Blog
-            </h2>
+              <h2 className="wow fadeInUp" data-wow-delay=".3s">
+                Explore Our Latest News &amp; Blog
+              </h2>
+            </div>
+            <div className="row">
+              <div
+                  className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+                  data-wow-delay=".3s"
+              >
+                <div className="news-card-items">
+                  <div
+                      className="news-image bg-cover"
+                      style={{ backgroundImage: 'url("assets/img/news/04.jpg")' }}
+                  />
+                  <div className="news-content">
+                    <p>November 25, 2024</p>
+                    <h4>
+                      <Link href="news-details">
+                        Revealing Images With Animations Gradients, Blend Modes
+                        Cool
+                      </Link>
+                    </h4>
+                    <Link className="link-btn" href="news-details">
+                      Read More
+                      <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div
+                  className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+                  data-wow-delay=".5s"
+              >
+                <div className="news-card-items">
+                  <div
+                      className="news-image bg-cover"
+                      style={{ backgroundImage: 'url("assets/img/news/05.jpg")' }}
+                  />
+                  <div className="news-content">
+                    <p>November 25, 2024</p>
+                    <h4>
+                      <Link href="news-details">
+                        List of 5 ways Generating Real-Time Audio Sentiment
+                        Analysis With
+                      </Link>
+                    </h4>
+                    <Link className="link-btn" href="news-details">
+                      Read More
+                      <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div
+                  className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+                  data-wow-delay=".7s"
+              >
+                <div className="news-card-items">
+                  <div
+                      className="news-image bg-cover"
+                      style={{ backgroundImage: 'url("assets/img/news/06.jpg")' }}
+                  />
+                  <div className="news-content">
+                    <p>November 25, 2024</p>
+                    <h4>
+                      <Link href="news-details">
+                        September Of Never Ending Adventures (2024 Wallpapers
+                        Edition)
+                      </Link>
+                    </h4>
+                    <Link className="link-btn" href="news-details">
+                      Read More
+                      <i className="far fa-arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="row">
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".3s"
-            >
-              <div className="news-box-items">
-                <div className="news-content">
-                  <p>November 25, 2024</p>
-                  <h4>
-                    <Link href="news-details">
-                      Revealing Images With Animations Gradients, Blend Modes
-                      Cool
-                    </Link>
-                  </h4>
-                  <Link className="link-btn" href="news-details">
-                    Read More
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-                <div
-                  className="news-image bg-cover"
-                  style={{ backgroundImage: 'url("assets/img/news/01.jpg")' }}
-                />
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".5s"
-            >
-              <div className="news-box-items">
-                <div className="news-content">
-                  <p>November 25, 2024</p>
-                  <h4>
-                    <Link href="news-details">
-                      List of 5 ways Generating Real Time Audio Sentiment
-                      Analysis
-                    </Link>
-                  </h4>
-                  <Link className="link-btn" href="news-details">
-                    Read More
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-                <div
-                  className="news-image bg-cover"
-                  style={{ backgroundImage: 'url("assets/img/news/02.jpg")' }}
-                />
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-              data-wow-delay=".7s"
-            >
-              <div className="news-box-items">
-                <div className="news-content">
-                  <p>November 25, 2024</p>
-                  <h4>
-                    <Link href="news-details">
-                      Revealing Images With Animations Gradients, Blend Modes
-                      Cool
-                    </Link>
-                  </h4>
-                  <Link className="link-btn" href="news-details">
-                    Read More
-                    <i className="far fa-arrow-right" />
-                  </Link>
-                </div>
-                <div
-                  className="news-image bg-cover"
-                  style={{ backgroundImage: 'url("assets/img/news/03.jpg")' }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </NextLayout>
+        </section>
+      </NextLayout>
   );
 };
 export default page;

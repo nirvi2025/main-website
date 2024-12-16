@@ -5,8 +5,8 @@ import React, { Fragment, useEffect, useState } from "react";
 import {NextHeaderProps} from "@/utility/interface";
 import { nextUtility } from "@/utility";
 import Image from "next/image";
-import profilePic from '../public/assets/img/logo/white-logo.svg';
-import N_logo from '../public/assets/img/nirvy/Nirvi_Main Logo File_Horizontal Logo.png'
+import Nirvy_Food_App_logo from '../public/assets/img/nirvy/Nirvi_Main Logo File_Horizontal Logo.png'
+import Nirvy_Food_App_logo_Dark from '../public/assets/img/nirvy/Nirvi_Main Logo File_Horizontal Logo - Black.png'
 
 const Header:React.FC<NextHeaderProps> = ({ header, single }) => {
   useEffect(() => {
@@ -715,7 +715,7 @@ const Header1:React.FC<NextHeaderProps> = ({ single }) => {
             <div className="header-main">
               <div className="sticky-logo">
                 <Link href="/">
-                  <Image src={profilePic} alt={"logo-img"} className="logo-1" height={35} width={120} priority={true}/>
+                  <Image src={Nirvy_Food_App_logo} alt={"Nirvy_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
                   {/*<img*/}
                   {/*  src="assets/img/logo/white-logo.svg"*/}
                   {/*  alt="logo-img"*/}
@@ -788,7 +788,8 @@ const Header2:React.FC<NextHeaderProps> = ({ single }) => {
             <div className="header-main">
               <div className="sticky-logo">
                 <Link href="/">
-                  <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                  <Image src={Nirvy_Food_App_logo} alt={"Nirvy_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
+                  {/*<img src="assets/img/logo/black-logo.svg" alt="logo-img" />*/}
                 </Link>
               </div>
               <div className="header-left">
@@ -844,7 +845,7 @@ const Header3:React.FC<NextHeaderProps> = ({ single }) => {
             <div className="header-main">
               <div className="sticky-logo">
                 <Link href="/">
-                  <Image src={N_logo} alt={"Niry_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
+                  <Image src={Nirvy_Food_App_logo} alt={"Nirvy_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
                   {/*<img src="assets/img/logo/black-logo.svg" alt="logo-img" />*/}
                 </Link>
               </div>
@@ -911,10 +912,12 @@ const Header5:React.FC<NextHeaderProps> = ({ single }) => {
             <div className="header-main">
               <div className="sticky-logo">
                 <Link href="/" className="logo-1">
-                  <img src="assets/img/logo/white-logo.svg" alt="logo-img" />
+                  <Image src={Nirvy_Food_App_logo} alt={"Nirvy_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
+                  {/*<img src="assets/img/logo/white-logo.svg" alt="logo-img" />*/}
                 </Link>
                 <Link href="/" className="logo-2">
-                  <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                  <Image src={Nirvy_Food_App_logo_Dark} alt={"Nirvy_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
+                  {/*<img src="assets/img/logo/black-logo.svg" alt="logo-img" />*/}
                 </Link>
               </div>
               <div className="header-left">
@@ -963,7 +966,8 @@ const Header6:React.FC<NextHeaderProps> = ({ single }) => {
             <div className="header-main">
               <div className="sticky-logo">
                 <Link href="/">
-                  <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                  <Image src={Nirvy_Food_App_logo} alt={"Nirvy_logo-img"} className="logo-1" style={{maxWidth:160,height:50,objectFit:"contain"}} priority={true}/>
+                  {/*<img src="assets/img/logo/black-logo.svg" alt="logo-img" />*/}
                 </Link>
               </div>
               <div className="header-left">

@@ -1,9 +1,11 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import NextLayout from "@/layouts/NextLayout";
+import type {Metadata} from "next";
 
-export const metadata = {
+export const metadata:Metadata = {
   title: "Nirvy - Online Food Delivery Application",
   description: "Welcome to our Nirvy page.",
+  keywords: "Nirvy, Food Delivery, Online Food Delivery, Nirvy Food, Online Food Delivery Application, Nirvi, Niirvii",
 };
 const page = () => {
   return (

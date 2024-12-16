@@ -10,10 +10,12 @@ import "@css/swiper-bundle.min.css";
 import "./globals.css";
 import Preloader from "@/layouts/Preloader";
 import Chatbot from "@/components/Chatbot";
+import type {Metadata} from "next";
 
-export const metadata = {
-  title: "Nirvy - Online Food Delivery Application",
-  description: "Welcome to our Nirvy page.",
+export const metadata:Metadata = {
+    title: "Nirvy - Online Food Delivery Application",
+    description: "Welcome to our Nirvy page.",
+    keywords: "Nirvy, Food Delivery, Online Food Delivery, Nirvy Food, Online Food Delivery Application, Nirvi, Niirvii",
 };
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {

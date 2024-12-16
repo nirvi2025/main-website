@@ -1,11 +1,36 @@
+import type {Metadata} from "next";
+import bale from "@/public/assets/img/bale.png";
 import Breadcrumb from "@/components/Breadcrumb";
 import NextLayout from "@/layouts/NextLayout";
+import Image from "next/image";
+import {revalidatePath} from "next/cache";
+import Form from "next/form";
 
-export const metadata = {
+export const metadata:Metadata = {
   title: "Nirvy - Online Food Delivery Application",
   description: "Welcome to our Nirvy page.",
+  keywords: "Nirvy, Food Delivery, Online Food Delivery, Nirvy Food, Online Food Delivery Application, Nirvi, Niirvii",
 };
-const page = () => {
+export default async function page () {
+  async function addUser(formData: FormData) {
+    "use server"
+    const payload = {
+      name:formData.get("name"),
+      email:formData.get("email"),
+      phone:formData.get("phone"),
+      message:formData.get("message"),
+    }
+    const res = await fetch("https://67402b8bd0b59228b7eeea26.mockapi.io/next-aut/v1/users", {
+      method: "POST",
+      headers:{
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+    await res.json()
+    // revalidatePath("/")
+  }
+
   return (
     <NextLayout>
       <Breadcrumb pageName="Contact Us" />
@@ -18,7 +43,8 @@ const page = () => {
                 <div className="contact-content">
                   <div className="section-title">
                     <span className="sub-content wow fadeInUp">
-                      <img src="assets/img/bale.png" alt="img" />
+                      <Image src={bale} alt={"bale_image"} />
+                      {/*<img src="assets/img/bale.png" alt="img" />*/}
                       Contact Us
                     </span>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
@@ -51,10 +77,9 @@ const page = () => {
                   data-wow-delay=".4s"
                 >
                   <h3>Send Us Message</h3>
-                  <form
-                    action="#"
+                  <Form
+                    action={addUser}
                     id="contact-form"
-                    method="POST"
                     className="contact-form-items"
                   >
                     <div className="row g-4">
@@ -62,7 +87,7 @@ const page = () => {
                         <div className="form-clt">
                           <input
                             type="text"
-                            name="name"
+                            name={"name"}
                             id="name"
                             placeholder="Full Name"
                           />
@@ -72,7 +97,7 @@ const page = () => {
                         <div className="form-clt">
                           <input
                             type="text"
-                            name="phone"
+                            name={"phone"}
                             id="phone"
                             placeholder="Phone"
                           />
@@ -82,7 +107,7 @@ const page = () => {
                         <div className="form-clt">
                           <input
                             type="text"
-                            name="email"
+                            name={"email"}
                             id="email2"
                             placeholder="Your Email"
                           />
@@ -92,7 +117,7 @@ const page = () => {
                         <div className="form-clt">
                           <textarea
                             name="message"
-                            id="message"
+                            id={"message"}
                             placeholder="Comments"
                             defaultValue={""}
                           />
@@ -104,7 +129,7 @@ const page = () => {
                         </button>
                       </div>
                     </div>
-                  </form>
+                  </Form>
                 </div>
               </div>
             </div>
@@ -127,4 +152,3 @@ const page = () => {
     </NextLayout>
   );
 };
-export default page;

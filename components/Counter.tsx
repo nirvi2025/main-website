@@ -18,7 +18,7 @@ const Counter:React.FC<CounterProps> = ({ end, decimals = 0 }) => {
       //     duration={3}
       //     decimals={decimals ? decimals : 0}
       // >
-        <div ref={ref}>
+        <span ref={ref}>
           {inView && (
               <CountUp
                   end={end}
@@ -29,7 +29,7 @@ const Counter:React.FC<CounterProps> = ({ end, decimals = 0 }) => {
                   data-to={end}
               />
           )}
-        </div>
+        </span>
       // </CountUp>
   );
 };

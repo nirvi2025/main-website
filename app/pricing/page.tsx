@@ -3,10 +3,12 @@ import Cta from "@/components/Cta";
 import Pricing, { Pricing2 } from "@/components/Pricing";
 import { TestimonialSlider1 } from "@/components/TestimonialSlider";
 import NextLayout from "@/layouts/NextLayout";
+import type {Metadata} from "next";
 
-export const metadata = {
+export const metadata:Metadata = {
   title: "Nirvy - Online Food Delivery Application",
   description: "Welcome to our Nirvy page.",
+  keywords: "Nirvy, Food Delivery, Online Food Delivery, Nirvy Food, Online Food Delivery Application, Nirvi, Niirvii",
 };
 const page = () => {
   return (

@@ -1,4 +1,5 @@
 import Counter from "@/components/Counter";
+import type { Metadata } from "next";
 import GrowBusiness from "@/components/GrowBusiness";
 import Team from "@/components/Team";
 import { TestimonialSlider3 } from "@/components/TestimonialSlider";
@@ -8,9 +9,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Landing_Page_logo from "@/public/assets/img/nirvy/Landingpage.png";
 
-export const metadata = {
+export const metadata:Metadata = {
   title: "Nirvy - Online Food Delivery Application",
   description: "Welcome to our Nirvy page.",
+  keywords: "Nirvy, Food Delivery, Online Food Delivery, Nirvy Food, Online Food Delivery Application, Nirvi, Niirvii",
 };
 const page = () => {
   return (
@@ -55,7 +57,7 @@ const page = () => {
               </div>
               <div className="col-lg-6">
                 <div className="hero-image">
-                  <Image src={Landing_Page_logo} alt={"Nirvy_logo-img"} className="logo-1" />
+                  <Image src={Landing_Page_logo} alt={"Nirvy_logo-img"} className="logo-1" priority={true}/>
                   <div className="frame-shape">
                     <img src="assets/img/hero/frame-3.png" alt="shape-img" />
                   </div>

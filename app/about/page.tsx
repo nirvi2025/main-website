@@ -96,6 +96,7 @@ const page = () => {
                     href="about"
                     className="theme-btn mt-50 wow fadeInUp"
                     data-wow-delay=".5s"
+                    aria-label={"About"}
                   >
                     Learn More Us
                     <i className="far fa-arrow-right" />

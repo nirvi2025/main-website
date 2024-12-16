@@ -29,7 +29,7 @@ const Footer1 = () => {
       <div className="container">
         <div className="discussed-items">
           <div className="footer-logo wow fadeInUp" data-wow-delay=".3s">
-            <Link href="/">
+            <Link href="/" aria-label={"Dashboard"}>
               <img src="assets/img/logo/white-logo.svg" alt="logo-img" />
             </Link>
           </div>
@@ -521,7 +521,7 @@ const Footer3 = () => {
                   <p>Get more update to join Us</p>
                   <div className="footer-input">
                     <input type="email" id="email" placeholder="Your Email" />
-                    <button className="newsletter-btn" type="submit">
+                    <button aria-label={"Submit_Btn"} className="newsletter-btn" type="submit">
                       <i className="far fa-arrow-right" />
                     </button>
                   </div>

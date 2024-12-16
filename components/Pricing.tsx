@@ -39,7 +39,7 @@ const Pricing = () => {
                 </h2>
                 <p>For Small Businesses</p>
               </div>
-              <div className="pricing-button">
+              <div className="pricing-button" aria-label={"pricing-button"}>
                 <Link href="contact" className="theme-btn style-transparent">
                   Choose Package
                 </Link>
@@ -202,7 +202,7 @@ export const Pricing2 = ({
                   accusa
                 </p>
               </div>
-              <div className="pricing-button">
+              <div className="pricing-button" aria-label={"pricing-choose-package-button"}>
                 <Link href="contact" className="theme-btn bg-header">
                   Choose Package
                 </Link>

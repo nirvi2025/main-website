@@ -43,7 +43,7 @@ const page = () => {
                   Build your Web Traffic With <br />
                   Our Next Agency
                 </h1>
-                <div className="hero-button wow fadeInUp" data-wow-delay=".6s">
+                <div className="hero-button wow fadeInUp" data-wow-delay=".6s" aria-label={"Learn-More-Button"}>
                   <Link href="about" className="theme-btn">
                     Learn More <i className="far fa-arrow-right" />
                   </Link>

@@ -369,7 +369,7 @@ const page = () => {
                       id="email"
                       placeholder="Email Address"
                     />
-                    <button className="theme-btn bg-2">
+                    <button className="theme-btn bg-2" aria-label={"signup-submit-button"}>
                       <span>
                         Sign Up <i className="far fa-arrow-right" />
                       </span>

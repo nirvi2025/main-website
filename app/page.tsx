@@ -37,11 +37,13 @@ const page = () => {
                     Wholesome, delicious meals delivered straight to your child's school<br />
                     because every bite matters for their growth and happiness!
                   </p>
-                  <div className="hero-button">
+                  <div className="hero-button" aria-label={"Discover More"}>
                     <Link
                         href="about"
                         className="theme-btn wow fadeInUp"
                         data-wow-delay=".7s"
+                        aria-hidden={true}
+                        aria-label={"About"}
                     >
                       Discover More <i className="far fa-arrow-right" />
                     </Link>
@@ -49,6 +51,7 @@ const page = () => {
                         href="service"
                         className="btn-link wow fadeInUp"
                         data-wow-delay=".8s"
+                        aria-label={"Service"}
                     >
                       View Services <i className="far fa-arrow-right" />
                     </Link>

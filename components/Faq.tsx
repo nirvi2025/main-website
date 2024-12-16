@@ -32,6 +32,7 @@ const Faq = () => {
                             <button
                                 className={`accordion-button ${faq === item.id ? 'active' : 'collapsed'}`}
                                 onClick={() => handleFaqToggle(item.id)}
+                                aria-label={"Toggle-faq"}
                             >
                               {item.title}
                             </button>

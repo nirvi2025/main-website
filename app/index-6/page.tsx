@@ -60,7 +60,7 @@ const page = () => {
                     <div className="icon">
                       <i className="fal fa-envelope" />
                     </div>
-                    <button className="theme-btn" type="submit" aria-label={"signup-submit-button"}>
+                    <button className="theme-btn" type="submit">
                       Sign Up Free <i className="far fa-arrow-right" />
                     </button>
                   </div>

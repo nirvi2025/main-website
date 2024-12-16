@@ -29,7 +29,7 @@ const Footer1 = () => {
       <div className="container">
         <div className="discussed-items">
           <div className="footer-logo wow fadeInUp" data-wow-delay=".3s">
-            <Link href="/" aria-label={"Dashboard"}>
+            <Link href="/">
               <img src="assets/img/logo/white-logo.svg" alt="logo-img" />
             </Link>
           </div>

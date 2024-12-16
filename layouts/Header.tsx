@@ -45,7 +45,7 @@ const Menu:React.FC<NextHeaderProps> = ({ single, menu }) => {
         <nav id="mobile-menu" className="d-none d-xl-block">
           <ul>
             <li className="has-dropdown active menu-thumb">
-              <Link href="/" aria-label={"Dashboard"}>
+              <Link href="/">
                 Home
                 <i className="fas fa-angle-down" />
               </Link>
@@ -55,7 +55,7 @@ const Menu:React.FC<NextHeaderProps> = ({ single, menu }) => {
                     <div className="col-xl-2 homemenu">
                       <div className="homemenu-thumb">
                         <img src="assets/img/header/home-1.jpg" alt="img" />
-                        <div className="demo-button" aria-label={"demo-button"}>
+                        <div className="demo-button">
                           <Link href="/" className="theme-btn">
                             Multi Page
                           </Link>
@@ -71,7 +71,7 @@ const Menu:React.FC<NextHeaderProps> = ({ single, menu }) => {
                     <div className="col-xl-2  homemenu">
                       <div className="homemenu-thumb">
                         <img src="assets/img/header/home-2.jpg" alt="img" />
-                        <div className="demo-button" aria-label={"demo-button-multipage"}>
+                        <div className="demo-button">
                           <Link href="index-2" className="theme-btn">
                             Multi Page
                           </Link>
@@ -88,10 +88,10 @@ const Menu:React.FC<NextHeaderProps> = ({ single, menu }) => {
                       <div className="homemenu-thumb">
                         <img src="assets/img/header/home-3.jpg" alt="img" />
                         <div className="demo-button">
-                          <Link href="index-3" className="theme-btn" aria-label={"demo-button-multipage-index3"}>
+                          <Link href="index-3" className="theme-btn">
                             Multi Page
                           </Link>
-                          <Link href="index-three-page" className="theme-btn" aria-label={"demo-button-onepage-index3"}>
+                          <Link href="index-three-page" className="theme-btn">
                             One Page
                           </Link>
                         </div>

@@ -33,7 +33,7 @@ const page = () => {
                   accusantium <br />
                   doloremque laudantium, totam rem aperiam
                 </p>
-                <div className="button-items" aria-label={"Hire-me-button"}>
+                <div className="button-items">
                   <div
                     className="about-button wow fadeInUp"
                     data-wow-delay=".3s"

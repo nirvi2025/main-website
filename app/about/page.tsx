@@ -1,3 +1,5 @@
+import type {Metadata} from "next";
+import {ImageProps} from "@/utility/interface";
 import Breadcrumb from "@/components/Breadcrumb";
 import FunFactCounter from "@/components/FunFactCounter";
 import Team from "@/components/Team";
@@ -5,13 +7,22 @@ import { TestimonialSlider2 } from "@/components/TestimonialSlider";
 import { WorkingProcess2 } from "@/components/WorkingProcess";
 import NextLayout from "@/layouts/NextLayout";
 import Link from "next/link";
-import type {Metadata} from "next";
+import Image from "next/image";
+import Bale_about_page from "@/public/assets/img/bale.png";
+import About_05_image from "@/public/assets/img/about/05.jpg";
 
 export const metadata:Metadata = {
   title: "Nirvy - Online Food Delivery Application",
   description: "Welcome to our Nirvy page.",
   keywords: "Nirvy, Food Delivery, Online Food Delivery, Nirvy Food, Online Food Delivery Application, Nirvi, Niirvii",
 };
+
+// const Image_Data:ImageProps = [
+//   {
+//     image: Bale_about_page,
+//     alt:"About_Image"
+//   }
+// ]
 const page = () => {
   return (
     <NextLayout>
@@ -26,7 +37,7 @@ const page = () => {
                 <div className="about-content ms-0 style-about">
                   <div className="section-title">
                     <span className="sub-content wow fadeInUp">
-                      <img src="assets/img/bale.png" alt="img" />
+                      <Image src={Bale_about_page} alt="about_img"/>
                       About Company
                     </span>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
@@ -53,7 +64,7 @@ const page = () => {
               </div>
               <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                 <div className="about-image-3">
-                  <img src="assets/img/about/05.jpg" alt="img" />
+                  <Image src={About_05_image} alt="about_05_Img" />
                 </div>
               </div>
             </div>

@@ -41,3 +41,8 @@ export const FaqData: FaqProps[] = [
     { id: 4, title: "Have Any Professional Team Member?", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tiueaque quae abillo inventore veritatis et quasi architecto beatae vitae dicta explicabo voluptatem voluptas aspernatur" },
     { id: 5, title: "Have you any Global Customer?", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tiueaque quae abillo inventore veritatis et quasi architecto beatae vitae dicta explicabo voluptatem voluptas aspernatur" },
 ]
+
+export interface ImageProps {
+    image: {};
+    alt: string;
+}

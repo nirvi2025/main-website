@@ -8,6 +8,7 @@ import NextLayout from "@/layouts/NextLayout";
 import Link from "next/link";
 import Image from "next/image";
 import Landing_Page_logo from "@/public/assets/img/nirvy/Landingpage.png";
+import bottom_shape from "@/public/assets/img/hero/bottom-shape.png";
 
 export const metadata:Metadata = {
   title: "Nirvy - Online Food Delivery Application",
@@ -20,7 +21,7 @@ const page = () => {
         {/* Hero Section Start */}
         <section className="hero-section hero-3">
           <div className="bottom-shape">
-            <img src="assets/img/hero/bottom-shape.png" alt="shape-img" />
+            <Image src={bottom_shape} alt="shape-img" />
           </div>
           <div className="container">
             <div className="row g-4 align-items-center">
@@ -57,7 +58,7 @@ const page = () => {
               </div>
               <div className="col-lg-6">
                 <div className="hero-image">
-                  <Image src={Landing_Page_logo} alt={"Nirvy_logo-img"} className="logo-1" priority={true}/>
+                  <Image src={Landing_Page_logo} alt={"Nirvy_logo-img"} className="logo-1" priority={true} placeholder="blur"/>
                   <div className="frame-shape">
                     <img src="assets/img/hero/frame-3.png" alt="shape-img" />
                   </div>

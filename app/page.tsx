@@ -7,7 +7,7 @@ import { WorkingProcess2 } from "@/components/WorkingProcess";
 import NextLayout from "@/layouts/NextLayout";
 import Link from "next/link";
 import Image from "next/image";
-import Landing_Page_logo from "@/public/assets/img/nirvy/Landingpage.png";
+import Landing_Page_logo from "@/public/assets/img/nirvy/Landingpage.webp";
 import bottom_shape from "@/public/assets/img/hero/bottom-shape.png";
 
 export const metadata:Metadata = {
@@ -15,7 +15,7 @@ export const metadata:Metadata = {
   description: "Welcome to our Nirvy page.",
   keywords: "Nirvy, Food Delivery, Online Food Delivery, Nirvy Food, Online Food Delivery Application, Nirvi, Niirvii",
 };
-const page = () => {
+export default async function page () {
   return (
       <NextLayout header={3} footer={3}>
         {/* Hero Section Start */}
@@ -470,4 +470,3 @@ const page = () => {
       </NextLayout>
   );
 };
-export default page;

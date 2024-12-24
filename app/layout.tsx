@@ -11,6 +11,7 @@ import "./globals.css";
 import Preloader from "@/layouts/Preloader";
 import Chatbot from "@/components/Chatbot";
 import type {Metadata} from "next";
+import { Rubik } from "next/font/google";
 
 export const metadata: Metadata = {
     title: "Nirvy - Healthy Meals for Happy Kids | Online Food Delivery",
@@ -32,10 +33,16 @@ export const metadata: Metadata = {
     }
 };
 
+const rubik = Rubik({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700", "900"],
+    style: ["normal", "italic"],
+    display: "swap",
+});
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={rubik.className}>
       <body>
       <Preloader />
       {children}

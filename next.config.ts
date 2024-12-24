@@ -1,7 +1,7 @@
 import {NextConfig} from 'next';
 
 const nextConfig:NextConfig = {
-    // productionBrowserSourceMaps: true
+    // productionBrowserSourceMaps: true,
     images: {
         remotePatterns: [
             {
